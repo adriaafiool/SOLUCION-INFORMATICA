@@ -26,10 +26,10 @@
 void display (){
   pushStyle();
   //fill (fillColor);noStroke();
-  rect(this.x, this.y, this.w, this.h, 8);
+  rect(this.x, this.y, this.w, this.h, 5);
    
-  fill(105, 109, 125); textAlign(CENTER); textSize(10); textFont(fuente2);
-  text(textBoton, this.x + this.w/2, this.y + this.h/2 + 10);
+  fill(105, 109, 125); textAlign(CENTER); textSize(8); textFont(fuente2);
+  text(textBoton, this.x + this.w/2, this.y + this.h/2 + 4);
   popStyle();
 }
 

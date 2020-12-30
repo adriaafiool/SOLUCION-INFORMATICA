@@ -10,11 +10,11 @@ void cargarMedia (){
 void cargarImagenes (){
   
   //imagenes MENUPRINCIPAL
-  imgLogo = loadImage("../imagenes/logo2.jpg");
-  imgIconoAlimentacion = loadImage("../imagenes/iconoalimentacion.jpg");
-  imgIconoHidratacion = loadImage ("../imagenes/iconohidratacion.jpg");
-  imgIconoActividad = loadImage ("../imagenes/iconoactividad.jpg");
-  imgIconoPerfil = loadImage ("../imagenes/iconoperfil.jpg");
+  imgLogo = loadImage("../imagenes/logo2.png");
+  imgIconoAlimentacion = loadImage("../imagenes/iconoalimentacion.png");
+  imgIconoHidratacion = loadImage ("../imagenes/iconohidratacion.png");
+  imgIconoActividad = loadImage ("../imagenes/iconoactividad.png");
+  imgIconoPerfil = loadImage ("../imagenes/iconoperfil.png");
   
   //imagenes MENUALIMENTACION
   imgFondo = loadImage("../imagenes/fondo.jpg");

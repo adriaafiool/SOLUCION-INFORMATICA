@@ -23,7 +23,7 @@ void cargarImagenes (){
   imgIconoActividad = loadImage ("../imagenes/iconoactividad.png");
   imgIconoPerfil = loadImage ("../imagenes/iconoperfil.png");
   imgIconoAtras = loadImage ("../imagenes/iconoatras.png");
-  imgIconoAnadir = loadImage ("../imagenes/iconoanadir.png");
+  imgIconoAnadir = loadImage ("../imagenes/anadir4.png");
   
   //imagenes ESPECIFICAS
   imgIconoVaso = loadImage ("../imagenes/iconovaso.png");

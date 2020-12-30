@@ -1,24 +1,28 @@
+
+//MENU GENERAL//
 void dibujaLogo1 (){
-  image (imgLogo, margenX, margenY, Logo1W, Logo1H);  
+  fill (255,255,255); noStroke();
+  rect (margenX, margenY, Logo1W, Logo1H, 8);
+  image (imgLogo, margenX, margenY, Logo1W, Logo1H); 
+}
+
+void dibujaIconoPerfil (){  
+  fill (255,255,255); noStroke();
+  rect ( width - margenX - 100, margenY, Perfil1W, Perfil1H, 8);
+  biIconoPerfil.display();
+
 }
   
-//void dibujaResumenGeneral (){
-  // stroke (0);
-   //rect (margenX, ((2*margenY) + Logo1H), ResumenGeneralW, ResumenGeneralH, 20);
-//}
- 
 void dibujaBloqueDestacados (){
-   stroke (1);
+   noStroke (); fill (255,255,255);  
    rect (2*margenX + ResumenGeneralW, 2*margenY + 100, BloqueDestacadosW, BloqueDestacadosH);
-}
+ }
 
+//comunes
 void dibujaLogo2 (){
+  fill (255,255,255); noStroke();
+  rect (margenX, margenY, Logo2W, Logo2H, 8);
   image (imgLogo, margenX, margenY, Logo2W, Logo2H);
-}
-
-void dibujaPerfil2 (){
-  stroke (255,0,0);
-  rect (width - margenX - Perfil2W, margenY, Perfil2W, Perfil2H);
 }
 
 void dibujaIconoApartado (){
@@ -32,27 +36,38 @@ void dibujaIconoApartado (){
   
 }
 
+
+//alimentación y actividad
 void dibujaAnadirItem () {
   stroke (255,0,0);
-  rect (margenX, 2*margenY + Logo2H + FlechaRegresoH, AnadirItemW, AnadirItemH);
+  rect (margenX, margenY + Logo2H + biAtrasH, AnadirItemW, AnadirItemH);
 }
 
 void dibujaCrearItem (){
   stroke (255,0,0);
-  rect (margenX, 3*margenY + Logo2H + FlechaRegresoH + AnadirItemH, CrearItemW, CrearItemH);
+  rect (margenX, 1.5*margenY + Logo2H + biAtrasH + AnadirItemH, CrearItemW, CrearItemH);
 }
 
 void dibujaResumenDia (){
   stroke (255,0,0);
-  rect (2*margenX + AnadirItemW, 3*margenY + Logo2H + FlechaRegresoH + AnadirItemH, ResuDiaW, ResuDiaH);
+  rect (margenX + AnadirItemW, 1.5*margenY + Logo2H + biAtrasH + AnadirItemH, ResuDiaW, ResuDiaH);
 }
 
 void dibujaInfoDia (){
   stroke (255,0,0);
-  rect (2*margenX + AnadirItemW, 4*margenY + Logo2H + FlechaRegresoH + AnadirItemH + AnadirItemH, InfoDiaW, InfoDiaH);
+  rect (margenX + AnadirItemW, 2*margenY + Logo2H +  biAtrasH + AnadirItemH + AnadirItemH, InfoDiaW, InfoDiaH);
 }
 
 void dibujaResumenSemanal () {
   stroke (255,0,0);
-  rect (3*margenX + AnadirItemW + ResuDiaW, 3*margenY + Logo2H + FlechaRegresoH + AnadirItemH, ResuSemanalW, ResuSemanalH);
+  rect (1.5*margenX + AnadirItemW + ResuDiaW, 1.5*margenY + Logo2H + biAtrasH + AnadirItemH, ResuSemanalW, ResuSemanalH);
+}
+
+
+//hidratacion
+
+void dibujaAnadirAgua (){
+  noStroke();
+  fill (255,255,255);
+  rect (1.25*margenX, margenY + Logo2H + biAtrasH, AnadirAguaW, AnadirAguaH,10);
 }

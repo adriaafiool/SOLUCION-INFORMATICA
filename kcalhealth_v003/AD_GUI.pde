@@ -4,8 +4,9 @@
 
 //Botones MenuPrincipal
 Boton  bAtras;
-BotonImagen biAtras, biIconoAlimentacion, biIconoHidratacion, biIconoActividad, biIconoPerfil, biIconoAnadir,
+BotonImagen biAtras, biIconoAlimentacion, biIconoHidratacion, biIconoActividad,
             biIconoVaso1, biIconoVaso2, biIconoVaso3, biIconoVaso4;
+BotonImagenFondo bifIconoPerfil, bifIconoPerfil2, bifIconoAnadir, bifIconoCrear;
 
 //Creación elementos GUI
 void setGUI(){
@@ -16,27 +17,27 @@ void setGUI(){
 
 
 void iniciaBotones () {
-  biIconoPerfil = new BotonImagen (imgIconoPerfil, width - margenX - 100, margenY, Perfil1W, Perfil1H);
+  bifIconoPerfil = new BotonImagenFondo (imgIconoPerfil, Perfil1X, Perfil1Y, Perfil1W, Perfil1H, Perfil1W, Perfil1H);
+  bifIconoPerfil2 = new BotonImagenFondo (imgIconoPerfil, Perfil2X, Perfil2Y, Perfil2W, Perfil2H, Perfil2W, Perfil2H);
   biIconoAlimentacion = new BotonImagen (imgIconoAlimentacion, IconoAlimentacionX, IconoAlimentacionY, IconoAlimentacionW, IconoAlimentacionH);
   biIconoHidratacion = new BotonImagen (imgIconoHidratacion, IconoHidratacionX, IconoHidratacionY, IconoHidratacionW, IconoHidratacionH);
   biIconoActividad = new BotonImagen (imgIconoActividad, IconoActividadX, IconoActividadY, IconoActividadW, IconoActividadH);
- // biAtras = new BotonImagen (imgIconoAtras, margenX, 0.75*margenY + Logo2H, biAtrasW, biAtrasH);
-  bAtras = new Boton ("ATRAS",  margenX, 0.75*margenY + Logo2H, biAtrasW, biAtrasH//, 105, 109, 125
-  );
-  biIconoAnadir = new BotonImagen (imgIconoAnadir, 1.5*margenX, 1.5*margenY + Logo1H, 50, 50);
-  biIconoVaso1 = new BotonImagen (imgIconoVaso, 1.25*margenX, margenY+Perfil1H, 60, 70);
-  biIconoVaso2 = new BotonImagen (imgIconoVaso, 1.25*margenX, 1.75*margenY+Perfil1H+80, 60, 70);
-  biIconoVaso3 = new BotonImagen (imgIconoVaso, 1.25*margenX, 2.5*margenY+Perfil1H+2*80, 60, 70);
-  biIconoVaso4 = new BotonImagen (imgIconoVaso, 1.25*margenX, 3.25*margenY+Perfil1H+3*80, 60, 70);
+  bAtras = new Boton ("ATRAS",  bAtrasX, bAtrasY, bAtrasW, bAtrasH);
+  bifIconoAnadir = new BotonImagenFondo (imgIconoAnadir, AnadirItemX + (AnadirItemW/2), AnadirItemY + (AnadirItemH/2), AnadirItemIconoW, AnadirItemIconoH, AnadirItemW, AnadirItemH);
+  bifIconoCrear = new BotonImagenFondo (imgIconoAnadir, CrearItemX + (CrearItemW/2), CrearItemY + (CrearItemH/2), CrearItemIconoW, CrearItemIconoH, CrearItemW, CrearItemH);
+  biIconoVaso1 = new BotonImagen (imgIconoVaso, VasoX, Vaso1Y, VasoW, VasoH);
+  biIconoVaso2 = new BotonImagen (imgIconoVaso, VasoX, Vaso2Y, VasoW, VasoH);
+  biIconoVaso3 = new BotonImagen (imgIconoVaso, VasoX, Vaso3Y, VasoW, VasoH);
+  biIconoVaso4 = new BotonImagen (imgIconoVaso, VasoX, Vaso4Y, VasoW, VasoH);
 }
 
 void desactivaTodos(){
-  biIconoPerfil.setEnabled(false);
+  bifIconoPerfil.setEnabled(false);
   biIconoAlimentacion.setEnabled(false);
   biIconoHidratacion.setEnabled(false);
   biIconoActividad.setEnabled(false);
-//  biAtras.setEnabled(false);
-  biIconoAnadir.setEnabled(false);
+  bAtras.setEnabled(false);
+  bifIconoAnadir.setEnabled(false);
   biIconoVaso1.setEnabled(false);
   biIconoVaso2.setEnabled(false);
   biIconoVaso3.setEnabled(false);
@@ -44,27 +45,27 @@ void desactivaTodos(){
 }
 
 void activaBotonesMenuPrincipal() {
-  biIconoPerfil.setEnabled(true);
+  bifIconoPerfil.setEnabled(true);
   biIconoAlimentacion.setEnabled(true);
   biIconoHidratacion.setEnabled(true);
   biIconoActividad.setEnabled(true);
 }
 
 void activaBotonesMenuAlimentacion () {
-  biIconoPerfil.setEnabled(true);
-  //biAtras.setEnabled(true);
-  biIconoAnadir.setEnabled(true);
+  bifIconoPerfil2.setEnabled(true);
+  bAtras.setEnabled(true);
+  bifIconoAnadir.setEnabled(true);
 }
 
 void activaBotonesMenuActividad () {
-  biIconoPerfil.setEnabled(true);
+  bifIconoPerfil2.setEnabled(true);
   bAtras.setEnabled(true);
-  biIconoAnadir.setEnabled(true);
+  bifIconoAnadir.setEnabled(true);
 
 }
 
 void activaBotonesMenuHidratacion () {
-  biIconoPerfil.setEnabled(true);
+  bifIconoPerfil2.setEnabled(true);
   bAtras.setEnabled(true);
   biIconoVaso1.setEnabled(true);
   biIconoVaso2.setEnabled(true);
