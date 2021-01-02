@@ -105,6 +105,12 @@ float ResuSemanalX = GrafAlimeX,
       ResuSemanalY = AnadirItemY,
       ResuSemanalW = GrafAlimeW,
       ResuSemanalH = HEIGHT - AnadirItemY - margenY - GrafAlimeH - 10;
+      
+      
+//ALIMENTACION//
+float CPGX = CrearItemX + CrearItemW/2,
+      CPGY = CrearItemY + CrearItemH/2,
+      CPGR = CrearItemW/4;
 
       
  //HIDRATACION//
@@ -141,7 +147,4 @@ float VasoX = margenX + (AnadirAguaW/2),
       VasoTexto2Y = Vaso2Y + 5,
       VasoTexto3Y = Vaso3Y + 5,
       VasoTexto4Y = Vaso4Y + 5;
-      
-      
-      
       

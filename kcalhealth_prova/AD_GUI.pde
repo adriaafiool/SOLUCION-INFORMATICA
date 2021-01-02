@@ -4,31 +4,38 @@
 
 //Botones MenuPrincipal
 Boton  bAtras;
+
 BotonImagen biAtras, biIconoAlimentacion, biIconoHidratacion, biIconoActividad,
             biIconoVaso1, biIconoVaso2, biIconoVaso3, biIconoVaso4;
+            
 BotonImagenFondo bifIconoPerfil, bifIconoPerfil2, bifIconoAnadir, bifIconoCrear;
+
+Diagrama CPG;
 
 //Creación elementos GUI
 void setGUI(){
 
   iniciaBotones();
+  inciaDiagramas();
 
 }
 
 
 void iniciaBotones () {
-  bifIconoPerfil = new BotonImagenFondo (imgIconoPerfil, Perfil1X, Perfil1Y, Perfil1W, Perfil1H, Perfil1W, Perfil1H);
-  bifIconoPerfil2 = new BotonImagenFondo (imgIconoPerfil, Perfil2X, Perfil2Y, Perfil2W, Perfil2H, Perfil2W, Perfil2H);
+  bAtras = new Boton ("ATRAS",  bAtrasX, bAtrasY, bAtrasW, bAtrasH);
+  
   biIconoAlimentacion = new BotonImagen (imgIconoAlimentacion, IconoAlimentacionX, IconoAlimentacionY, IconoAlimentacionW, IconoAlimentacionH);
   biIconoHidratacion = new BotonImagen (imgIconoHidratacion, IconoHidratacionX, IconoHidratacionY, IconoHidratacionW, IconoHidratacionH);
   biIconoActividad = new BotonImagen (imgIconoActividad, IconoActividadX, IconoActividadY, IconoActividadW, IconoActividadH);
-  bAtras = new Boton ("ATRAS",  bAtrasX, bAtrasY, bAtrasW, bAtrasH);
-  bifIconoAnadir = new BotonImagenFondo (imgIconoAnadir, AnadirItemX + (AnadirItemW/2), AnadirItemY + (AnadirItemH/2), AnadirItemIconoW, AnadirItemIconoH, AnadirItemW, AnadirItemH);
-  bifIconoCrear = new BotonImagenFondo (imgIconoAnadir, CrearItemX + (CrearItemW/2), CrearItemY + (CrearItemH/2), CrearItemIconoW, CrearItemIconoH, CrearItemW, CrearItemH);
   biIconoVaso1 = new BotonImagen (imgIconoVaso, VasoX, Vaso1Y, VasoW, VasoH);
   biIconoVaso2 = new BotonImagen (imgIconoVaso, VasoX, Vaso2Y, VasoW, VasoH);
   biIconoVaso3 = new BotonImagen (imgIconoVaso, VasoX, Vaso3Y, VasoW, VasoH);
   biIconoVaso4 = new BotonImagen (imgIconoVaso, VasoX, Vaso4Y, VasoW, VasoH);
+
+  bifIconoAnadir = new BotonImagenFondo (imgIconoAnadir, AnadirItemX + (AnadirItemW/2), AnadirItemY + (AnadirItemH/2), AnadirItemIconoW, AnadirItemIconoH, AnadirItemW, AnadirItemH);
+  bifIconoCrear = new BotonImagenFondo (imgIconoAnadir, CrearItemX + (CrearItemW/2), CrearItemY + (CrearItemH/2), CrearItemIconoW, CrearItemIconoH, CrearItemW, CrearItemH);
+  bifIconoPerfil = new BotonImagenFondo (imgIconoPerfil, Perfil1X, Perfil1Y, Perfil1W, Perfil1H, Perfil1W, Perfil1H);
+  bifIconoPerfil2 = new BotonImagenFondo (imgIconoPerfil, Perfil2X, Perfil2Y, Perfil2W, Perfil2H, Perfil2W, Perfil2H);
 }
 
 void desactivaTodos(){
@@ -90,7 +97,6 @@ void inicaBotonesAjustes () {
 }
 
 
-
-void activaBotones(){
-  bAtras.setEnabled(true);
+void iniciaDiagramas (){
+  CPG = new Diagrama (CPGX, CPGY, CPGR);
 }

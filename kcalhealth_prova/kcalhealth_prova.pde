@@ -1,4 +1,12 @@
+Diagrama CPG;
 
+
+
+void draw(){
+  background(255);
+  // Dibuix del Diagrama de Sectors
+  s.display();
+}
 //Enumeración de las pantallas
 enum PANTALLA {MENUPRINCIPAL, MENUALIMENTACION, MENUACTIVIDAD, MENUHIDRATACION, 
      
