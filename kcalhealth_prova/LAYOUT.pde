@@ -250,6 +250,11 @@ float BuscarItemsX = AnadirItemX, //40
       AjustarItemsW = WIDTH - 2*margenX - BuscarItemsW - 10,
       AjustarItemsH = BuscarItemsH;
       
+float bRegistrarX = WIDTH - 150,
+      bRegistrarY = bAtrasY + 30, 
+      bRegistrarW = 100, 
+      bRegistrarH = 40;
+      
       
 //ALIMENTACIÓN REGISTRO//
 float NombreItX = AjustarItemsX + 10, //240
@@ -278,11 +283,14 @@ float CTCantidadItemsX = TaPorX,
       sMedidaItemX = CTCantidadItemsX + CTCantidadItemsW + 20,
       sMedidaItemY = CTCantidadItemsY,
       sMedidaItemW = CTCantidadItemsW,
-      sMedidaItemH = CTCantidadItemsH;
+      sMedidaItemH = CTCantidadItemsH,
+            
+      CalTotX = sMedidaItemX + sMedidaItemW + 40,
+      CalTotY = TaPorY;
       
 String[] sMedidaItemA = {"g", "Kg", "tablespoon", "teaspoon"};
 
-float CaloriasItemX = sMedidaItemX + sMedidaItemW + 40,
+float CaloriasItemX = CalTotX,
       CaloriasItemY = CTCantidadItemsY,
       CaloriasItemW = CTCantidadItemsW,
       CaloriasItemH = CTCantidadItemsH;
@@ -433,3 +441,29 @@ float  difEntreItems = 30,
        
        Item6X = Item1X,
        Item6Y = Item5Y + difEntreItems;
+
+
+//ACTIVIDAD REGISTRO//
+float  EmpiezaX = TaPorX,
+       EmpiezaY = TaPorY,
+       
+       DuradaX = HoraX,
+       DuradaY = HoraY,
+       
+       CalTotQueX = EmpiezaX + CTCantidadItemsW + 60,
+       CalTotQueY = DuradaY;
+       
+float  CTEmpiezaX = CTCantidadItemsX,
+       CTEmpiezaY = CTCantidadItemsY, 
+       CTEmpiezaW = CTCantidadItemsW, 
+       CTEmpiezaH = CTCantidadItemsH,
+       
+       CTDuradaX = bDesayunoX, 
+       CTDuradaY = bDesayunoY, 
+       CTDuradaW = CTEmpiezaW,
+       CTDuradaH = CTEmpiezaH,
+       
+       CaloriasQuemadasX = CalTotQueX,
+       CaloriasQuemadasY = CTDuradaY,
+       CaloriasQuemadasW = CTEmpiezaW,
+       CaloriasQuemadasH = CTEmpiezaH;

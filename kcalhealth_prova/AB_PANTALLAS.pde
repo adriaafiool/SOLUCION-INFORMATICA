@@ -218,6 +218,7 @@ void dibujaPantallaAlimentacionRegistro (){
   dibujaModeloSubpantallas ();
   dibujaModeloRegistro ();
   dibujaRegistroAlimentacion ();
+  bRegistrar.display();
 } 
 void dibujaPantallaAlimentacionRecetas (){
   imageMode(CORNER);
@@ -243,6 +244,8 @@ void dibujaPantallaActividadRegistro (){
   
   dibujaModeloSubpantallas();
   dibujaModeloRegistro();
+  dibujaRegistroActividad ();
+  bRegistrar.display();
 }
 
 void dibujaPantallaActividadRutinas (){

@@ -41,10 +41,11 @@ void mousePressed(){
     CTCantidadItemRec1.isPressed();
     CTCantidadItemRec2.isPressed();
     CTCantidadItemRec3.isPressed();
-
+    CTEmpieza.isPressed();
+    CTDurada.isPressed();
     
     cDiaRegistro.checkButtons();
-    
+    cDiaRegistroActividad.checkButtons();
 
   if(biIconoAlimentacion.mouseOverButton() && biIconoAlimentacion.enabled){
       desactivaTodos();
@@ -220,6 +221,12 @@ void keyPressed() {
   else if (CTCantidadItemRec3.mouseOverTextField() && CTCantidadItemRec3.enabled){
    CTCantidadItemRec3.keyPressed(key, (int)keyCode);
   }
+  else if (CTEmpieza.mouseOverTextField() && CTEmpieza.enabled){
+   CTEmpieza.keyPressed(key, (int)keyCode);
+  }
+  else if (CTDurada.mouseOverTextField() && CTDurada.enabled){
+   CTDurada.keyPressed(key, (int)keyCode);
+  }
   
   
   else if(keyCode==LEFT){
@@ -229,6 +236,16 @@ void keyPressed() {
   // Anar un mes endavant
   else if(keyCode==RIGHT){
    cDiaRegistro.nextMonth();
+   println("PREV MONTH");
+  }
+  
+  else if(keyCode==LEFT){
+   cDiaRegistroActividad.prevMonth();
+   println("PREV MONTH");
+  }
+  // Anar un mes endavant
+  else if(keyCode==RIGHT){
+   cDiaRegistroActividad.nextMonth();
    println("PREV MONTH");
   }
   

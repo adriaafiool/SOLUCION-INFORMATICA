@@ -107,6 +107,7 @@ void dibujaModeloRegistro (){
 void dibujaRegistroAlimentacion (){
   fill (0,0,0); textFont (fuente1); textAlign (CORNER); textSize (15); 
   text ("TAMAÑO DE LA PORCIÓN", TaPorX, TaPorY);
+  text ("CALORÍAS TOTALES", CalTotX, CalTotY);
   text ("HORA", HoraX, HoraY);
   text ("PROPIEDADES", PropiedadesX, PropiedadesY);
   text ("PRODUCTOS RECOMENDADOS...", IRecX, IRecY);
@@ -134,4 +135,11 @@ void dibujaRecetasAlimentacion(){
   fill (0,0,0); textFont (fuente1); textAlign (CORNER); textSize (15);
   pushStyle(); textSize (20); text ("ITEM", NombreItX, NombreItY); popStyle();
   text ("ITEM1", Item1X, Item1Y); text ("ITEM2", Item2X, Item2Y); text ("ITEM3", Item3X, Item3Y); text ("ITEM4", Item4X, Item4Y); text ("ITEM5", Item5X, Item5Y); text ("ITEM6", Item6X, Item6Y); 
+}
+
+void dibujaRegistroActividad (){
+  fill (0,0,0); textFont (fuente1); textAlign (CORNER); textSize (15);
+  text ("EMPIEZA", EmpiezaX, EmpiezaY); text ("DURADA", DuradaX, DuradaY); text ("CALORÍAS QUEMADAS", CalTotQueX, CalTotQueY);
+  cDiaRegistroActividad.display();
+  CTEmpieza.display(); CTDurada.display(); fill (grisflojo); rect (CaloriasQuemadasX, CaloriasQuemadasY, CaloriasQuemadasW, CaloriasQuemadasH, 8);
 }

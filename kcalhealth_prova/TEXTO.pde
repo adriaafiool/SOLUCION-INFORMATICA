@@ -12,6 +12,9 @@ String bDesayunoT = "DESAYUNO",
        bAlmuerzoT = "ALMUERZO",
        bMeriendaT = "MERIENDA",
        bCenaT = "CENA",
-       bNocheT = "NOCHE";
+       bNocheT = "NOCHE",
+       
+       bRegistrarT = "REGISTRAR",
+       bCrearT = "CREAR";
        
        
