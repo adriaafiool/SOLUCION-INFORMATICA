@@ -2,7 +2,7 @@
   
   //propiedades
  float x, y, w, h, s;
- color fillColor, fillColorSeleccionado;
+ color fillColor;
  String textBoton;
  boolean enabled;
  int a,b,c;
@@ -16,26 +16,20 @@
    this.h = h; 
    this.s = s;
    this.enabled = true;
-   fillColorSeleccionado = color(198, 200, 207);
-   fillColor = color (236, 237, 239);
+   //fillColor = color(a,b,c);
    //noStroke();
  }
  
  void setEnabled (boolean b){
    this.enabled = b;
  }
-
+ 
 void display (){
-  pushStyle();;  noStroke(); 
-  if (!enabled) {
-    fill(fillColorSeleccionado); 
-  }
-  else {
-     fill (fillColor);
-  }
+  pushStyle();
+  //fill (fillColor);noStroke();
   rect(this.x, this.y, this.w, this.h, 5);
    
-  textAlign(CENTER); textFont(fuente2); textSize(s); fill (105, 109, 125);
+  fill(105, 109, 125); textAlign(CENTER); textSize(s); textFont(fuente2);
   text(textBoton, this.x + this.w/2, this.y + this.h/2 + 4);
   popStyle();
 }

@@ -24,7 +24,7 @@
  void setEnabled (boolean b){
    this.enabled = b;
  }
-
+ 
 void display (){
   pushStyle();;  noStroke(); 
   if (!enabled) {

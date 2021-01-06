@@ -13,5 +13,3 @@ String bDesayunoT = "DESAYUNO",
        bMeriendaT = "MERIENDA",
        bCenaT = "CENA",
        bNocheT = "NOCHE";
-       
-       

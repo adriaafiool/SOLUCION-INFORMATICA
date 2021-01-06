@@ -215,10 +215,11 @@ void dibujaPantallaAlimentacionRegistro (){
   bHecho.display();
   dibujaIconoApartado ();
   
-  dibujaModeloSubpantallas ();
-  dibujaModeloRegistro ();
+  dibujamodeloregistro ();
   dibujaRegistroAlimentacion ();
-} 
+
+}
+
 void dibujaPantallaAlimentacionRecetas (){
   imageMode(CORNER);
   image (imgFondoAlimentacion, 0, 0, width, height);
@@ -228,8 +229,7 @@ void dibujaPantallaAlimentacionRecetas (){
   bHecho.display();
   dibujaIconoApartado ();
   
-  dibujaModeloSubpantallas ();
-  dibujaRecetasAlimentacion();
+  dibujamodeloregistro ();
 }
 
 void dibujaPantallaActividadRegistro (){
@@ -241,8 +241,7 @@ void dibujaPantallaActividadRegistro (){
   bHecho.display();
   dibujaIconoApartado ();
   
-  dibujaModeloSubpantallas();
-  dibujaModeloRegistro();
+  dibujamodeloregistro ();
 }
 
 void dibujaPantallaActividadRutinas (){
@@ -254,8 +253,9 @@ void dibujaPantallaActividadRutinas (){
   bHecho.display();
   dibujaIconoApartado ();
   
-
+  dibujamodeloregistro ();
 }
+
 void dibujaPantallaAjustes (){
   
 }

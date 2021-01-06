@@ -15,18 +15,9 @@ Diagrama          CPG, Deportes, AguaHorario, Al1, Al2, Al3, Al4, Al5, Al6, Al7,
 
 Diagrama2         CalIng, CalQue, MlBeb;
 
-CampoTexto        CTAnadirManual, CTBuscarItems, CTCantidadItems, CTCantidadItemRec1, CTCantidadItemRec2, CTCantidadItemRec3;
+CampoTexto        CTAnadirManual, CTBuscarItems, CTCantidadItems;
 
-Select            sMedidaItem, sMedidaItemRec1, sMedidaItemRec2, sMedidaItemRec3;
-
-Calendario        cDiaRegistro;
-
-Table             tCPG;
-
-BotonTick         btItemRec1, btItemRec2, btItemRec3;
-
-// Variable radio button group
-
+Select            sMedidaItem;
 
 //Creación elementos GUI
 void setGUI(){
@@ -59,25 +50,11 @@ void iniciaBotones () {
   bifIconoPerfil = new BotonImagenFondo (imgIconoPerfil, Perfil1X, Perfil1Y, Perfil1W, Perfil1H, Perfil1W, Perfil1H);
   bifIconoPerfil2 = new BotonImagenFondo (imgIconoPerfil, Perfil2X, Perfil2Y, Perfil2W, Perfil2H, Perfil2W, Perfil2H);
   
-  CTAnadirManual = new CampoTexto (AnadirManualX, AnadirManualY, AnadirManualW, AnadirManualH, 14);
-  CTBuscarItems = new CampoTexto (CTBuscarItemsX, CTBuscarItemsY, CTBuscarItemsW, CTBuscarItemsH, 24);
-  CTCantidadItems = new CampoTexto (CTCantidadItemsX, CTCantidadItemsY, CTCantidadItemsW, CTCantidadItemsH, 14);
-  CTCantidadItemRec1 = new CampoTexto (CTCantidadItemRec1X, CTCantidadItemRec1Y, CTCantidadItemRec1W, CTCantidadItemRec1H, 10);
-  CTCantidadItemRec2 = new CampoTexto (CTCantidadItemRec2X, CTCantidadItemRec2Y, CTCantidadItemRec2W, CTCantidadItemRec2H, 10);
-  CTCantidadItemRec3 = new CampoTexto (CTCantidadItemRec3X, CTCantidadItemRec3Y, CTCantidadItemRec3W, CTCantidadItemRec3H, 10);
+  CTAnadirManual = new CampoTexto (AnadirManualX, AnadirManualY, AnadirManualW, AnadirManualH);
+  CTBuscarItems = new CampoTexto (CTBuscarItemsX, CTBuscarItemsY, CTBuscarItemsW, CTBuscarItemsH);
+  CTCantidadItems = new CampoTexto (CTCantidadItemsX, CTCantidadItemsY, CTCantidadItemsW, CTCantidadItemsH);
   
   sMedidaItem = new Select (sMedidaItemA, sMedidaItemX, sMedidaItemY, sMedidaItemW, sMedidaItemH);
-  sMedidaItemRec1 = new Select (sMedidaItemA, sMedidaItemRec1X, sMedidaItemRec1Y, sMedidaItemRec1W, sMedidaItemRec1H);
-  sMedidaItemRec2 = new Select (sMedidaItemA, sMedidaItemRec2X, sMedidaItemRec2Y, sMedidaItemRec2W, sMedidaItemRec2H); 
-  sMedidaItemRec3 = new Select (sMedidaItemA, sMedidaItemRec3X, sMedidaItemRec3Y, sMedidaItemRec3W, sMedidaItemRec3H);
- 
-  cDiaRegistro = new Calendario (cDiaRegistroX, cDiaRegistroY, cDiaRegistroW, cDiaRegistroH);
-  
-  tCPG = new Table(files, columnes);
-  
-  btItemRec1 = new BotonTick(btItemRec1X, btItemRec1Y, btItemRec1R);
-  btItemRec2 = new BotonTick(btItemRec2X, btItemRec2Y, btItemRec2R);
-  btItemRec3 = new BotonTick(btItemRec3X, btItemRec3Y, btItemRec3R);
 }
 
 void iniciaDiagramas (){
@@ -123,10 +100,6 @@ void desactivaTodos(){
   CTAnadirManual.setEnabled(false);
   CTBuscarItems.setEnabled(false);
   CTCantidadItems.setEnabled(false);
-  CTCantidadItemRec1.setEnabled(false);
-  CTCantidadItemRec2.setEnabled(false);
-  CTCantidadItemRec3.setEnabled(false);
-  
 }
 
 void activaBotonesMenuPrincipal() {
@@ -170,9 +143,6 @@ void activaBotonesAlimentacionRegistro () {
   bMerienda.setEnabled(true);
   bCena.setEnabled(true);
   bNoche.setEnabled(true);
-  CTCantidadItemRec1.setEnabled(true);
-  CTCantidadItemRec2.setEnabled(true);
-  CTCantidadItemRec3.setEnabled(true);
 }
 
 void activaBotonesAlimentacionRecetas () {

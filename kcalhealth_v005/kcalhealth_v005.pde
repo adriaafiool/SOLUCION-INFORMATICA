@@ -20,15 +20,15 @@ void draw() {
   fill (255,255,255); noStroke();
   
   switch (pantalla) {
-    case MENUPRINCIPAL :         dibujaPantallaMenuPrincipal();  break;
-    case MENUALIMENTACION :      dibujaPantallaMenuAlimentacion (); break;
-    case MENUACTIVIDAD :         dibujaPantallaMenuActividad (); break;
-    case MENUHIDRATACION :       dibujaPantallaMenuHidratacion (); break;
-    case ALIMENTACIONREGISTRO :  dibujaPantallaAlimentacionRegistro (); break;
-    case ALIMENTACIONRECETAS :   dibujaPantallaAlimentacionRecetas (); break;
-    case ACTIVIDADREGISTRO :     dibujaPantallaActividadRegistro (); break;
-    case ACTIVIDADRUTINAS :      dibujaPantallaActividadRutinas (); break;
-    case AJUSTES :               dibujaPantallaAjustes (); break;
+    case MENUPRINCIPAL :  dibujaPantallaMenuPrincipal();  break;
+    case MENUALIMENTACION : dibujaPantallaMenuAlimentacion (); break;
+    case MENUACTIVIDAD : dibujaPantallaMenuActividad (); break;
+    case MENUHIDRATACION : dibujaPantallaMenuHidratacion (); break;
+    case ALIMENTACIONREGISTRO : dibujaPantallaAlimentacionRegistro (); break;
+    case ALIMENTACIONRECETAS : dibujaPantallaAlimentacionRecetas (); break;
+    case ACTIVIDADREGISTRO : dibujaPantallaActividadRegistro (); break;
+    case ACTIVIDADRUTINAS : dibujaPantallaActividadRutinas (); break;
+    case AJUSTES : dibujaPantallaAjustes (); break;
   }
   
   println ("X: "+mouseX+", Y:"+mouseY+"");
@@ -38,14 +38,7 @@ void mousePressed(){
     CTAnadirManual.isPressed();
     CTBuscarItems.isPressed();
     CTCantidadItems.isPressed();
-    CTCantidadItemRec1.isPressed();
-    CTCantidadItemRec2.isPressed();
-    CTCantidadItemRec3.isPressed();
-
     
-    cDiaRegistro.checkButtons();
-    
-
   if(biIconoAlimentacion.mouseOverButton() && biIconoAlimentacion.enabled){
       desactivaTodos();
       pantalla = PANTALLA.MENUALIMENTACION;
@@ -100,8 +93,6 @@ void mousePressed(){
       pantalla = PANTALLA.ACTIVIDADRUTINAS;
       activaBotonesActividadRutinas();
  }
- 
- 
  
  else if(sMedidaItem.mouseOverSelect() && sMedidaItem.enabled){
     if(!sMedidaItem.collapsed){
@@ -165,41 +156,7 @@ void mousePressed(){
      bNoche.setEnabled(true);
    }
  }
- 
-  else if(btItemRec1.onMouseOver()){
-    btItemRec1.toggle();
-  }
-  else if(btItemRec2.onMouseOver()){
-    btItemRec2.toggle();
-  }
-  else if(btItemRec3.onMouseOver()){
-    btItemRec3.toggle();
-  }
-
-
- else if(sMedidaItemRec1.mouseOverSelect() && sMedidaItemRec1.enabled){
-    if(!sMedidaItemRec1.collapsed){
-      sMedidaItemRec1.update();      // Actualitzar valor  
-    }
-    sMedidaItemRec1.toggle();        // Plegar o desplegar
-  }
-   else if(sMedidaItemRec2.mouseOverSelect() && sMedidaItemRec2.enabled){
-    if(!sMedidaItemRec2.collapsed){
-      sMedidaItemRec2.update();      // Actualitzar valor  
-    }
-    sMedidaItemRec2.toggle();        // Plegar o desplegar
-  }
-     else if(sMedidaItemRec3.mouseOverSelect() && sMedidaItemRec3.enabled){
-    if(!sMedidaItemRec3.collapsed){
-      sMedidaItemRec3.update();      // Actualitzar valor  
-    }
-    sMedidaItemRec3.toggle();        // Plegar o desplegar
-  }
-  
-  
 }
-    
-
  
 void keyPressed() {
   if(CTAnadirManual.mouseOverTextField() && CTAnadirManual.enabled){
@@ -210,29 +167,7 @@ void keyPressed() {
   }
   else if (CTCantidadItems.mouseOverTextField() && CTCantidadItems.enabled){
    CTCantidadItems.keyPressed(key, (int)keyCode);
-  }
-  else if (CTCantidadItemRec1.mouseOverTextField() && CTCantidadItemRec1.enabled){
-   CTCantidadItemRec1.keyPressed(key, (int)keyCode);
-  }
-  else if (CTCantidadItemRec2.mouseOverTextField() && CTCantidadItemRec2.enabled){
-   CTCantidadItemRec2.keyPressed(key, (int)keyCode);
-  }
-  else if (CTCantidadItemRec3.mouseOverTextField() && CTCantidadItemRec3.enabled){
-   CTCantidadItemRec3.keyPressed(key, (int)keyCode);
-  }
-  
-  
-  else if(keyCode==LEFT){
-   cDiaRegistro.prevMonth();
-   println("PREV MONTH");
-  }
-  // Anar un mes endavant
-  else if(keyCode==RIGHT){
-   cDiaRegistro.nextMonth();
-   println("PREV MONTH");
-  }
-  
-  
+}
 }
 
 

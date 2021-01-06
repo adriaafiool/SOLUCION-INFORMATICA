@@ -3,10 +3,6 @@ float WIDTH = 1000,
       margenX = 40,
       margenY = 40;
       
-color rojobase = color (255, 133, 133),
-      grisfuerte = color (105, 109, 125),
-      grisflojo = color (236, 237, 239);
-      
 
 
 //MENÚ GENERAL//
@@ -78,10 +74,10 @@ float bAtrasX = margenX,
       bAtrasW = 40,
       bAtrasH = 15;
       
-float AnadirItemX = margenX, //40
+float AnadirItemX = margenX,
       AnadirItemY = 1.3*margenY + Logo2H + bAtrasH, //(147)
-      AnadirItemW = 120, //120
-      AnadirItemH = (HEIGHT - AnadirItemY - 1.2*margenY)/2, //202,5
+      AnadirItemW = 120,
+      AnadirItemH = (HEIGHT - AnadirItemY - 1.2*margenY)/2,
       AnadirItemIconoW = 40,
       AnadirItemIconoH = 38;
       
@@ -234,10 +230,10 @@ float[] AguaHorarioV = {500, 600, 250, 600, 250};
 color[] AguaHorarioC = {color(148, 199, 199), color(122, 225, 225), color(122, 199, 225), color (122, 173, 225), color (121, 147, 224)}; 
 
 
-//SUBPANTALLAS//
-float BuscarItemsX = AnadirItemX, //40
-      BuscarItemsY = AnadirItemY, //147
-      BuscarItemsW = 1.5*AnadirItemW, //180
+//REGISTRO//
+float BuscarItemsX = AnadirItemX,
+      BuscarItemsY = AnadirItemY,
+      BuscarItemsW = 1.5*AnadirItemW,
       BuscarItemsH = AnadirItemH + CrearItemH + 10,
       
       CTBuscarItemsX = BuscarItemsX + 10,
@@ -245,30 +241,25 @@ float BuscarItemsX = AnadirItemX, //40
       CTBuscarItemsW = BuscarItemsW - 20,
       CTBuscarItemsH = 40,
       
-      AjustarItemsX = BuscarItemsX + BuscarItemsW + 10, // 230
-      AjustarItemsY = BuscarItemsY, //147
+      AjustarItemsX = BuscarItemsX + BuscarItemsW + 10,
+      AjustarItemsY = BuscarItemsY,
       AjustarItemsW = WIDTH - 2*margenX - BuscarItemsW - 10,
       AjustarItemsH = BuscarItemsH;
       
-      
-//ALIMENTACIÓN REGISTRO//
-float NombreItX = AjustarItemsX + 10, //240
-      NombreItY = AjustarItemsY + 30, //177
+float NombreItX = AjustarItemsX + 10,
+      NombreItY = AjustarItemsY + 30,
       
       TaPorX = NombreItX + 20,
       TaPorY = NombreItY + 30,
       
-      HoraX = TaPorX, //260
-      HoraY = NombreItY + 30 + 70, //277
+      HoraX = TaPorX,
+      HoraY = NombreItY + 30 + 70,
       
       FechaX = TaPorX,
-      FechaY = NombreItY + 30 + 140, //347
+      FechaY = NombreItY + 30 + 140,
       
-      PropiedadesX = FechaX + 220,
-      PropiedadesY = FechaY,
-      
-      IRecX = PropiedadesX + 220,
-      IRecY = FechaY;
+      PRecX = FechaX + 200,
+      PRecY = NombreItY + 30 + 210;
       
 float CTCantidadItemsX = TaPorX,
       CTCantidadItemsY = TaPorY + 10,
@@ -316,120 +307,7 @@ float bDesayunoX = HoraX,
       bNocheY = bDesayunoY,
       bNocheW = bDesayunoW,
       bNocheH = bDesayunoH;
+
+
+
       
-int   cDiaRegistroX = 260,
-      cDiaRegistroY = 375,
-      cDiaRegistroW = 200,
-      cDiaRegistroH = 165;
-      
-//
-
-float tCPGW = 800, tCPGH = 300;
-
-int files = 6, columnes = 5;
-
-// Títols de les columnes 
-String[] headers = {"Id", "Nom", "Llinatges", "Edat", "Sexe"};
-
-// Amplades de les columnes
-float[] colWidths = {10, 20, 40, 10, 20};
-
-// Dades de la taula
-String[][] info = {
-                     {"1", "Pere", "Soler Miralles", "33", "Home"},
-                     {"2", "Maria", "Garcia Lopez", "25", "Dona"},
-                     {"3", "Joan", "Melis Cabrer", "47", "Home"},
-                     {"4", "Bel", "Riera Mates", "52", "Dona"},
-                     {"5", "Jose", "Perez Galdós", "37", "Home"},
-                  };
-      
- //
- 
- 
-float   btItemRec1X = IRecX, 
-        btItemRec1Y = IRecY + 25, 
-        btItemRec1R = 20,
-        
-        btItemRec2X = btItemRec1X, 
-        btItemRec2Y = btItemRec1Y + btItemRec1R + 40, 
-        btItemRec2R = btItemRec1R,
-        
-        btItemRec3X = btItemRec1X, 
-        btItemRec3Y = btItemRec2Y + btItemRec2R + 40, 
-        btItemRec3R = btItemRec1R,
-        
-        btItemRec1TX = btItemRec1X + btItemRec1R + 10,
-        btItemRec1TY = btItemRec1Y + btItemRec1R - 15,
-        
-        btItemRec2TX = btItemRec2X + btItemRec1R + 10,
-        btItemRec2TY = btItemRec2Y + btItemRec1R - 15,
-        
-        btItemRec3TX = btItemRec3X + btItemRec1R + 10,
-        btItemRec3TY = btItemRec3Y + btItemRec1R - 15;
-        
-float  CTCantidadItemRec1X = btItemRec1X + 20, 
-       CTCantidadItemRec1Y = btItemRec1Y + btItemRec1R - 5, 
-       CTCantidadItemRec1W = 60, 
-       CTCantidadItemRec1H = 15,
-       
-       CTCantidadItemRec2X = CTCantidadItemRec1X ,
-       CTCantidadItemRec2Y = btItemRec2Y + btItemRec2R - 5, 
-       CTCantidadItemRec2W = CTCantidadItemRec1W, 
-       CTCantidadItemRec2H = CTCantidadItemRec1H,
-       
-       CTCantidadItemRec3X = CTCantidadItemRec1X, 
-       CTCantidadItemRec3Y = btItemRec3Y + btItemRec3R - 5, 
-       CTCantidadItemRec3W = CTCantidadItemRec1W, 
-       CTCantidadItemRec3H = CTCantidadItemRec1H,
-  
-       sMedidaItemRec1X = CTCantidadItemRec1X + CTCantidadItemRec1W + 10,
-       sMedidaItemRec1Y = CTCantidadItemRec1Y, 
-       sMedidaItemRec1W = CTCantidadItemRec1W, 
-       sMedidaItemRec1H = CTCantidadItemRec1H,
-       
-       sMedidaItemRec2X = sMedidaItemRec1X,
-       sMedidaItemRec2Y = CTCantidadItemRec2Y,
-       sMedidaItemRec2W = sMedidaItemRec1W, 
-       sMedidaItemRec2H = sMedidaItemRec1H,
-       
-       sMedidaItemRec3X = sMedidaItemRec1X, 
-       sMedidaItemRec3Y = CTCantidadItemRec3Y, 
-       sMedidaItemRec3W = sMedidaItemRec1W, 
-       sMedidaItemRec3H = sMedidaItemRec1H,
-       
-       CaloriasItemRec1X = sMedidaItemRec1X + sMedidaItemRec1W + 10, 
-       CaloriasItemRec1Y = sMedidaItemRec1Y, 
-       CaloriasItemRec1W = CTCantidadItemRec1W, 
-       CaloriasItemRec1H = CTCantidadItemRec1H,
-       
-       CaloriasItemRec2X = CaloriasItemRec1X, 
-       CaloriasItemRec2Y = sMedidaItemRec2Y, 
-       CaloriasItemRec2W = CaloriasItemRec1W,
-       CaloriasItemRec2H = CaloriasItemRec1H,
-       
-       CaloriasItemRec3X = CaloriasItemRec1X,
-       CaloriasItemRec3Y = sMedidaItemRec3Y, 
-       CaloriasItemRec3W = CaloriasItemRec1W,
-       CaloriasItemRec3H = CaloriasItemRec1H;
-       
-       
-//ALIMENTACIÓN RECETAS//
-float  difEntreItems = 30,
-       
-       Item1X = TaPorX,
-       Item1Y = TaPorY,
-       
-       Item2X = Item1X,
-       Item2Y = Item1Y + difEntreItems,
-       
-       Item3X = Item1X,
-       Item3Y = Item2Y + difEntreItems,
-       
-       Item4X = Item1X,
-       Item4Y = Item3Y + difEntreItems,
-       
-       Item5X = Item1X,
-       Item5Y = Item4Y + difEntreItems,
-       
-       Item6X = Item1X,
-       Item6Y = Item5Y + difEntreItems;

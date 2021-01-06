@@ -34,9 +34,9 @@ class BotonImagenFondo {
 }
 
  boolean mouseOverButton(){
-   return (mouseX >= this.x - (this.a/2)) && 
-          (mouseX<=this.x + this.a) && 
-          (mouseY>= this.y - (this.b/2)) && 
-          (mouseY<= this.y + this.b); 
+   return (mouseX >= this.x) && 
+          (mouseX<=this.x + this.w) && 
+          (mouseY>= this.y) && 
+          (mouseY<= this.y + this.h); 
  }
 }

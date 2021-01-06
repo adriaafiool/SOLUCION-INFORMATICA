@@ -34,6 +34,6 @@ void cargarImagenes (){
   
 void cargarFuentes (){
   fuente1 = createFont ("../TIPOGRAFIES/fuente1.otf", 25);
-  fuente2 = createFont ("../TIPOGRAFIES/fuente2.otf", 25);
+  fuente2 = createFont ("../TIPOGRAFIES/fuente2.otf", 10);
 
 }
